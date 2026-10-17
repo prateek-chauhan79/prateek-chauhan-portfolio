@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Prateek Chauhan | Lead AI & Enterprise Cloud Architect</title>
-<meta name="description" content="Prateek Chauhan — Lead AI Architect and Enterprise Cloud Architect with 20+ years in technology architecture, Agentic AI, RAG, Azure security and governance.">
+<meta name="description" content="Prateek Chauhan — Lead AI Architect and Enterprise Cloud Architect with 20+ years in technology architecture, Agentic AI, RAG, Azure security and governance. Senior Cyber Security Engineer focused on cloud, identity and secrets security.">
 <script>
   // set theme + js flag before first paint (no flash, content visible without JS)
   document.documentElement.classList.add('js');
@@ -117,7 +117,7 @@ nav.scrolled{border-bottom-color:var(--border);box-shadow:0 4px 20px rgba(0,0,0,
 
 /* ---------- stats ---------- */
 .stats{padding:0 0 32px;margin-top:-24px;position:relative;z-index:2}
-.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);background:var(--card);border:1px solid var(--border);border-radius:18px;box-shadow:var(--shadow);overflow:hidden}
+.stats-grid{display:grid;grid-template-columns:repeat(5,1fr);background:var(--card);border:1px solid var(--border);border-radius:18px;box-shadow:var(--shadow);overflow:hidden}
 .stat{padding:28px 20px;text-align:center}
 .stat + .stat{border-left:1px solid var(--border)}
 .stat .num{font-size:2.5rem;font-weight:800;letter-spacing:-.03em;line-height:1.1;font-variant-numeric:tabular-nums;color:var(--accent)}
@@ -207,6 +207,30 @@ ul.ticks li::before{content:"";position:absolute;left:2px;top:.62em;width:7px;he
 .mini h4{font-size:.98rem;margin-bottom:2px}
 .mini span{color:var(--muted);font-size:.86rem}
 
+.cred-block{margin-top:56px}
+.cred-block > h3{font-size:.8rem;text-transform:uppercase;letter-spacing:.14em;color:var(--muted);margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.cred-block > h3 .i{color:var(--accent)}
+.cert-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.cert-grid .mini{margin-bottom:0}
+.mini .meta{display:block;font-family:'JetBrains Mono',monospace;font-size:.74rem;color:var(--muted);margin-top:6px}
+.mini .lvl{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:4px}
+.award-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.award-grid .mini{margin-bottom:0}
+.award-grid .mini p{color:var(--muted);font-size:.88rem;margin-top:6px;line-height:1.55}
+.lang{display:flex;justify-content:space-between;gap:10px}
+.lang span:last-child{font-size:.8rem}
+
+/* ---------- identity & secrets ---------- */
+.idsec{margin-top:24px;padding:32px;--c:var(--accent2)}
+.idsec .p-head{margin-bottom:8px}
+.idsec > p{color:var(--muted);margin-bottom:22px;max-width:820px}
+.id-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.id-item{background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:18px;transition:border-color .25s}
+.id-item:hover{border-color:var(--c)}
+.id-item h4{font-size:.94rem;margin-bottom:6px;display:flex;align-items:center;gap:8px;color:var(--text)}
+.id-item h4 .i{color:var(--c)}
+.id-item p{color:var(--muted);font-size:.86rem;line-height:1.55}
+
 /* ---------- contact ---------- */
 .contact-box{text-align:center;background:var(--card);border:1px solid var(--border);border-radius:24px;padding:64px 32px;box-shadow:var(--shadow);position:relative;overflow:hidden}
 .contact-box::before{content:"";position:absolute;inset:0;background:radial-gradient(500px 220px at 50% 0%,color-mix(in srgb,var(--accent) 12%,transparent),transparent);pointer-events:none}
@@ -233,14 +257,17 @@ html.js .reveal.visible{opacity:1;translate:0 0}
 
 /* ---------- responsive ---------- */
 @media (max-width:1000px){
-  .skill-grid,.cred-grid{grid-template-columns:repeat(2,1fr)}
+  .skill-grid,.cred-grid,.cert-grid,.id-grid{grid-template-columns:repeat(2,1fr)}
 }
 @media (max-width:900px){
   .hero-grid,.about-grid,.featured,.pair{grid-template-columns:1fr}
   .cards,.views{grid-template-columns:1fr}
   .stats-grid{grid-template-columns:repeat(2,1fr)}
-  .stat:nth-child(3){border-left:0}
+  .stat + .stat{border-left:0}
+  .stat:nth-child(even){border-left:1px solid var(--border)}
   .stat:nth-child(n+3){border-top:1px solid var(--border)}
+  .stat:last-child{grid-column:1/-1}
+  .award-grid{grid-template-columns:1fr}
   .tl-compact{grid-template-columns:1fr}
   .status{margin-left:0}
   .nav-links{display:none;position:absolute;top:68px;left:0;right:0;flex-direction:column;gap:0;padding:8px 12px 14px;background:var(--bg);border-bottom:1px solid var(--border);box-shadow:var(--shadow)}
@@ -251,8 +278,9 @@ html.js .reveal.visible{opacity:1;translate:0 0}
   .hero{min-height:auto}
 }
 @media (max-width:600px){
-  .skill-grid,.cred-grid{grid-template-columns:1fr}
+  .skill-grid,.cred-grid,.cert-grid,.id-grid{grid-template-columns:1fr}
   .container{padding:0 16px}
+  .idsec{padding:24px}
   .product,.card{padding:24px}
   .tl-card{padding:20px}
   .timeline{padding-left:28px}
@@ -293,6 +321,10 @@ html.js .reveal.visible{opacity:1;translate:0 0}
   <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></symbol>
   <symbol id="i-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></symbol>
   <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
+  <symbol id="i-key" viewBox="0 0 24 24"><circle cx="7.5" cy="15.5" r="5.5"/><path d="m21 2-9.6 9.6M15.5 7.5l3 3L22 7l-3-3"/></symbol>
+  <symbol id="i-usercheck" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><path d="m17 11 2 2 4-4"/></symbol>
+  <symbol id="i-bot" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4M8 16h.01M16 16h.01"/></symbol>
+  <symbol id="i-lang" viewBox="0 0 24 24"><path d="m5 8 6 6M4 14l6-6 2-3M2 5h12M7 2h1M22 22l-5-10-5 10M14 18h6"/></symbol>
 </svg>
 
 <div class="progress" id="progress"></div>
@@ -334,16 +366,19 @@ html.js .reveal.visible{opacity:1;translate:0 0}
         <span class="tag">Agentic AI</span><span class="tag">RAG</span><span class="tag">GenAI Security</span>
         <span class="tag">Microsoft Azure</span><span class="tag">Kubernetes</span><span class="tag">Terraform / IaC</span>
         <span class="tag">DevSecOps</span><span class="tag">Disaster Recovery</span>
+        <span class="tag">IAM / PAM</span><span class="tag">Entra ID</span><span class="tag">Key Vault &amp; Secrets</span>
       </div>
     </div>
     <aside class="profile hero-anim" style="--d:.3s">
       <div class="avatar"><div class="avatar-inner grad">PC</div></div>
-      <h3>Prateek Chauhan</h3>
-      <div class="role">Lead AI Architect · AT&amp;T</div>
+      <h3>Ing. Prateek Chauhan</h3>
+      <div class="role">Lead AI Architect · AT&amp;T<br>Senior Cyber Security Engineer</div>
       <ul class="facts">
         <li><svg class="i"><use href="#i-briefcase"/></svg>20+ years in enterprise technology</li>
         <li><svg class="i"><use href="#i-cpu"/></svg>Agentic AI, RAG &amp; GenAI security</li>
         <li><svg class="i"><use href="#i-cloud"/></svg>Azure architecture &amp; governance</li>
+        <li><svg class="i"><use href="#i-key"/></svg>Cloud, identity &amp; secrets security</li>
+        <li><svg class="i"><use href="#i-users"/></svg>Microsoft Certified Trainer (2020–2023)</li>
         <li><svg class="i"><use href="#i-pin"/></svg>Brno, Czechia</li>
       </ul>
     </aside>
@@ -356,7 +391,8 @@ html.js .reveal.visible{opacity:1;translate:0 0}
       <div class="stat"><div class="num" data-count="20" data-suffix="+">20+</div><div class="lbl">Years in Technology</div></div>
       <div class="stat"><div class="num" data-count="10" data-suffix="+">10+</div><div class="lbl">Years Enterprise Cloud</div></div>
       <div class="stat"><div class="num" data-count="14" data-suffix="+">14+</div><div class="lbl">Years at AT&amp;T</div></div>
-      <div class="stat"><div class="num" data-count="3">3</div><div class="lbl">AT&amp;T Awards</div></div>
+      <div class="stat"><div class="num" data-count="6">6</div><div class="lbl">AT&amp;T Awards</div></div>
+      <div class="stat"><div class="num" data-count="15" data-suffix="+">15+</div><div class="lbl">Certifications</div></div>
     </div>
   </div>
 </section>
@@ -370,6 +406,7 @@ html.js .reveal.visible{opacity:1;translate:0 0}
         <p>I'm a senior enterprise, cloud and AI architect with 20+ years in technology architecture and operations, including 10+ years in enterprise cloud architecture and recent leadership in <b>Agentic AI, RAG and AI-driven automation</b>.</p>
         <p>I have a strong hands-on architecture background in Microsoft Azure security controls, identity, networking, monitoring, DevOps/CI-CD, Kubernetes, Infrastructure as Code, disaster recovery and enterprise governance.</p>
         <p>I specialise in translating architecture and operational requirements into <b>secure, resilient and supportable solutions</b> — and in coordinating technical teams and stakeholders to deliver them.</p>
+        <p>As a <b>cyber security engineer</b>, my focus is cloud, identity and secrets security: Entra ID, Azure Key Vault, service principals, managed identities, network security controls and Microsoft Sentinel — backed by long experience in security guidelines, patching, incident/change management, audit support, root-cause analysis and disaster recovery. I bring transferable knowledge for enterprise <b>IAM/PAM and secrets-management</b> environments: least privilege, just-in-time access, workload identity, credential protection, access governance, secret rotation and secure automation.</p>
       </div>
       <div class="focus reveal" style="--d:.1s">
         <h3>What motivates me</h3>
@@ -382,6 +419,7 @@ html.js .reveal.visible{opacity:1;translate:0 0}
           <li>Architecture tracks with cross-discipline teams</li>
           <li>Documentation that meets enterprise &amp; regulatory standards</li>
           <li>Human-in-the-loop, safety-first AI</li>
+          <li>Knowledge sharing — Microsoft Certified Trainer; built Azure training paths and led AI sessions across AT&amp;T</li>
         </ul>
       </div>
     </div>
@@ -426,6 +464,22 @@ html.js .reveal.visible{opacity:1;translate:0 0}
           <li>Backup, clustering &amp; cache-mirroring</li>
           <li>Regulatory compliance &amp; documentation</li>
         </ul>
+      </div>
+    </div>
+
+    <div class="product idsec lift reveal">
+      <div class="p-head">
+        <div class="ico"><svg class="i"><use href="#i-key"/></svg></div>
+        <div><h3>Identity, Privileged Access &amp; Secrets Security</h3><div class="p-for">Cloud, identity &amp; secrets security engineering</div></div>
+      </div>
+      <p>Protecting the identities, credentials and secrets that cloud and AI workloads depend on — with least privilege, auditability and secure automation built in.</p>
+      <div class="id-grid">
+        <div class="id-item"><h4><svg class="i"><use href="#i-usercheck"/></svg>Microsoft identity &amp; access</h4><p>Entra ID / Azure AD access controls: RBAC, least privilege and PIM concepts such as time-bound/JIT activation, approvals, MFA, access reviews and auditability.</p></div>
+        <div class="id-item"><h4><svg class="i"><use href="#i-lock"/></svg>Azure Key Vault</h4><p>Protected storage and controlled retrieval of application secrets, keys and certificates, including access control, monitoring and rotation approaches.</p></div>
+        <div class="id-item"><h4><svg class="i"><use href="#i-server"/></svg>Workload identities</h4><p>Service principals and managed identities as non-human identities — limiting permissions and reducing reliance on long-lived embedded credentials.</p></div>
+        <div class="id-item"><h4><svg class="i"><use href="#i-key"/></svg>PAM &amp; secrets principles</h4><p>Centralised credential vaulting, privileged-account lifecycle, rotation, approvals, audit trails, separation of duties, and static vs. dynamically issued credentials.</p></div>
+        <div class="id-item"><h4><svg class="i"><use href="#i-bot"/></svg>AI-agent access</h4><p>Security-by-design for scoped agent permissions, API and knowledge-source access, credential protection and auditability in AI-enabled workflows.</p></div>
+        <div class="id-item"><h4><svg class="i"><use href="#i-shield"/></svg>Security operations</h4><p>Linux/Unix security, patching, hardening guidelines, incident/change management, root-cause analysis, audit support and disaster recovery.</p></div>
       </div>
     </div>
   </div>
@@ -528,53 +582,53 @@ html.js .reveal.visible{opacity:1;translate:0 0}
     <div class="timeline">
       <div class="tl-item current reveal"><div class="tl-card lift">
         <div class="tl-head"><h3>Lead AI Architect</h3><span class="tl-date">Jan 2024 – Present</span></div>
-        <div class="tl-co">AT&amp;T</div>
-        <p>Design and deploy AI-driven automation solutions and Agentic AI architectures for complex enterprise operational processes. Contribute to GenAI Security and Agentic AI Architecture, including RAG application design with UI, APIs, safety gates, LangGraph-based agent engines and knowledge sources. Lead data curation for AI model fine-tuning and develop scalable Python automation. Designed an AI-powered solution for 5G network provisioning, improving process efficiency, delivery speed and customer service.</p>
+        <div class="tl-co">AT&amp;T · Czechia</div>
+        <p>Design and deploy AI-driven automation solutions and Agentic AI architectures for complex enterprise and telecommunications operational processes. Contribute to GenAI Security and Agentic AI Architecture, including RAG application design with UI, APIs, safety gates, LangGraph-based agent engines and knowledge sources. Lead data curation for AI model fine-tuning and develop scalable Python automation. Designed an AI-powered solution for 5G network provisioning, improving process efficiency, delivery speed and customer service. Support Azure deployment pipeline work involving cloud infrastructure, CI/CD practices and monitoring, and collaborate across teams to align architecture with business and operational requirements.</p>
         <div class="tags"><span class="tag">Agentic AI</span><span class="tag">LangGraph</span><span class="tag">RAG</span><span class="tag">GenAI Security</span><span class="tag">Python</span><span class="tag">5G</span></div>
       </div></div>
 
       <div class="tl-item reveal"><div class="tl-card lift">
         <div class="tl-head"><h3>Principal Engineer – Azure</h3><span class="tl-date">Dec 2023 – Oct 2025</span></div>
-        <div class="tl-co">AT&amp;T</div>
-        <p>Designed and implemented an Azure deployment pipeline to automate secure, reliable and scalable infrastructure and service delivery. Developed CI/CD pipelines, applied enterprise best practices and integrated monitoring for ongoing performance optimization.</p>
+        <div class="tl-co">AT&amp;T · Czechia</div>
+        <p>Designed and implemented an Azure deployment pipeline to automate secure, reliable and scalable infrastructure and service delivery. Developed CI/CD pipelines, applied enterprise best practices and integrated monitoring for ongoing performance optimization. Worked within enterprise Azure architecture and delivery, applying enterprise standards and documentation practices for reliable, supportable and compliance-conscious solutions.</p>
         <div class="tags"><span class="tag">Azure</span><span class="tag">CI/CD</span><span class="tag">Monitoring</span><span class="tag">Automation</span></div>
       </div></div>
 
       <div class="tl-item reveal"><div class="tl-card lift">
         <div class="tl-head"><h3>Senior Architect – Enterprise Cloud</h3><span class="tl-date">Jul 2021 – Dec 2023</span></div>
-        <div class="tl-co">AT&amp;T</div>
-        <p>Architected Azure environments covering VMs, Storage, Data Lake Gen2, Load Balancer, VNets, NSGs, Azure AD, App Services, SQL, Cosmos DB, Data Factory and Synapse. Designed DevOps capabilities including CI/CD, ARM, Key Vault, migration, Monitor, Sentinel, Recovery Services Vaults, Kubernetes, Container Registries, Terraform and GitHub. Led architecture tracks and designed data-center migration and disaster-recovery solutions with emphasis on resilience.</p>
-        <div class="tags"><span class="tag">Azure AD</span><span class="tag">Sentinel</span><span class="tag">Terraform</span><span class="tag">Kubernetes</span><span class="tag">Synapse</span><span class="tag">DR</span></div>
+        <div class="tl-co">AT&amp;T · Czechia</div>
+        <p>Architected Azure environments covering VMs, Storage, Data Lake Gen2, Load Balancer, VNets, NSGs, Azure AD, App Services, SQL, Cosmos DB, Data Factory and Synapse. Designed DevOps capabilities including CI/CD, ARM, Key Vault, migration, Monitor, Sentinel, Recovery Services Vaults, Kubernetes, Container Registries, Terraform and GitHub. Led architecture tracks and designed data-center migration and disaster-recovery solutions with emphasis on resilience. Also used Azure DevOps and Azure Migrate, and designed storage/backup architectures across EMC, HDS, HP, IBM and NetApp, including replication, clustering and performance/capacity planning.</p>
+        <div class="tags"><span class="tag">Azure AD</span><span class="tag">Sentinel</span><span class="tag">Terraform</span><span class="tag">Kubernetes</span><span class="tag">Synapse</span><span class="tag">DR</span><span class="tag">Azure DevOps</span><span class="tag">Azure Migrate</span></div>
       </div></div>
 
       <div class="tl-item reveal"><div class="tl-card lift">
         <div class="tl-head"><h3>Architect – Enterprise Cloud</h3><span class="tl-date">Dec 2016 – Jul 2021</span></div>
-        <div class="tl-co">AT&amp;T</div>
-        <p>Designed enterprise storage and cloud architectures and provided guidance for OpenStack and AT&amp;T cloud environments. Led project tracks and coordinated specialists from multiple disciplines. Architected migration, disaster recovery, storage replication, backup, clustering and cache-mirroring solutions.</p>
-        <div class="tags"><span class="tag">OpenStack</span><span class="tag">Storage Architecture</span><span class="tag">Replication</span><span class="tag">Clustering</span></div>
+        <div class="tl-co">AT&amp;T · Brno, Czechia</div>
+        <p>Designed enterprise storage and cloud architectures and provided guidance for OpenStack and AT&amp;T cloud environments. Led project tracks and coordinated specialists from multiple disciplines. Architected migration, disaster recovery, storage replication, backup, clustering and cache-mirroring solutions. Designed SAN and storage-system solutions across Azure and AT&amp;T/OpenStack IaaS, supported Azure infrastructure and CI/CD (VNets, NSGs, Azure AD, Azure DevOps, ARM templates, Terraform, monitoring and migration services), and delivered operational guidance.</p>
+        <div class="tags"><span class="tag">OpenStack</span><span class="tag">Storage Architecture</span><span class="tag">Replication</span><span class="tag">Clustering</span><span class="tag">Azure IaaS</span><span class="tag">SAN Design</span></div>
       </div></div>
 
       <div class="tl-item reveal"><div class="tl-card lift">
         <div class="tl-head"><h3>Consultant – IT Operations / Storage Hosting Systems</h3><span class="tl-date">Jul 2012 – Dec 2016</span></div>
-        <div class="tl-co">AT&amp;T</div>
-        <p>Managed enterprise SAN environments across EMC, HDS, HP and NetApp platforms, including replication, performance analysis and capacity management. Provided end-to-end outage support, managed Cisco SAN switch installations/upgrades and mentored new team members.</p>
-        <div class="tags"><span class="tag">SAN</span><span class="tag">EMC</span><span class="tag">HDS</span><span class="tag">NetApp</span><span class="tag">Cisco MDS</span></div>
+        <div class="tl-co">AT&amp;T · Brno, Czechia</div>
+        <p>Managed enterprise SAN environments across EMC, HDS, HP and NetApp platforms, including replication, performance analysis and capacity management. Provided end-to-end outage support, managed Cisco SAN switch installations/upgrades and mentored new team members. Worked with Brocade and Cisco SAN switches, storage allocation and replication technologies including SRDF and ShadowImage, as part of problem-resolution, performance, replication and documentation teams.</p>
+        <div class="tags"><span class="tag">SAN</span><span class="tag">EMC</span><span class="tag">HDS</span><span class="tag">NetApp</span><span class="tag">Cisco MDS</span><span class="tag">Brocade</span><span class="tag">SRDF</span><span class="tag">ShadowImage</span></div>
       </div></div>
 
       <div class="tl-item reveal"><div class="tl-card lift">
         <div class="tl-head"><h3>IT Specialist L2 / Senior Unix &amp; Storage Administrator</h3><span class="tl-date">Jun 2009 – Jul 2012</span></div>
-        <div class="tl-co">IBM</div>
-        <p>Administered AIX, HP-UX and Red Hat Linux environments with security guidelines, patching, health checks, change and incident management. Managed SAN zoning and LUN operations in SLA-driven environments. Supported audits, prepared RCAs and coordinated teams and customers.</p>
+        <div class="tl-co">IBM · Brno, Czechia</div>
+        <p>Administered AIX, HP-UX and Red Hat Linux environments with security guidelines, patching, health checks, change and incident management. Managed SAN zoning and LUN operations in SLA-driven environments. Supported audits, prepared RCAs and coordinated teams and customers. Also handled port reservation, Windows server antivirus management, documentation and technical training.</p>
         <div class="tags"><span class="tag">AIX</span><span class="tag">HP-UX</span><span class="tag">RHEL</span><span class="tag">SAN Zoning</span><span class="tag">ITIL</span></div>
       </div></div>
 
       <div class="tl-item reveal">
         <div class="tl-compact">
-          <div class="tl-card lift"><div class="tl-head"><h3>Unix Administrator / Technical Focal Point</h3><span class="tl-date">2007 – 2009</span></div><div class="tl-co">Natek S.R.O.</div></div>
-          <div class="tl-card lift"><div class="tl-head"><h3>System Administrator</h3><span class="tl-date">2006</span></div><div class="tl-co">Tribal Fusion R&amp;D Pvt. Ltd.</div></div>
-          <div class="tl-card lift"><div class="tl-head"><h3>Technical Territory Manager</h3><span class="tl-date">2005 – 2006</span></div><div class="tl-co">IIHT Ltd</div></div>
-          <div class="tl-card lift"><div class="tl-head"><h3>Unix Administrator / Server Specialist</h3><span class="tl-date">2004 – 2005</span></div><div class="tl-co">Koenig Solutions Pvt. Ltd.</div></div>
-          <div class="tl-card lift"><div class="tl-head"><h3>Software Consultant</h3><span class="tl-date">2000 – 2003</span></div><div class="tl-co">Electronics Corporation of India Ltd.</div></div>
+          <div class="tl-card lift"><div class="tl-head"><h3>Unix Administrator / Technical Focal Point</h3><span class="tl-date">Feb 2007 – May 2009</span></div><div class="tl-co">Natek S.R.O. · South Moravia, Czechia</div><p>Supported Unix/Linux systems, security guidelines, patches, health checks, incident/change management and Windows Server antivirus; coordinated a team of six and prepared root-cause analyses.</p></div>
+          <div class="tl-card lift"><div class="tl-head"><h3>System Administrator</h3><span class="tl-date">Jul 2006 – Dec 2006</span></div><div class="tl-co">Tribal Fusion R&amp;D Pvt. Ltd. · Noida, India</div><p>Managed Linux and Windows Server 2003 environments, routers, switches and firewall infrastructure; troubleshot performance/connectivity and supported a California–Noida VPN link.</p></div>
+          <div class="tl-card lift"><div class="tl-head"><h3>Technical Territory Manager / Technical Trainer</h3><span class="tl-date">Jul 2005 – Jun 2006</span></div><div class="tl-co">IIHT Ltd · Northern India</div><p>Delivered technical audits, quality assurance, seminars and workshops; supported Windows Server and Red Hat Linux setup across 26 training centres. Training areas: MCSE, CCNA and RHCE.</p></div>
+          <div class="tl-card lift"><div class="tl-head"><h3>Unix Administrator / Server Specialist / Technical Trainer</h3><span class="tl-date">Feb 2004 – Jun 2005</span></div><div class="tl-co">Koenig Solutions Pvt. Ltd. · India</div><p>Built and troubleshot Windows Server 2003 and Red Hat Enterprise Linux environments; server support and technical training in MCSE, RHCE and CCNA.</p></div>
+          <div class="tl-card lift"><div class="tl-head"><h3>Software Consultant</h3><span class="tl-date">Jan 2000 – Sep 2003</span></div><div class="tl-co">Electronics Corporation of India Ltd. · Greater Delhi Area</div><p>Supported LAN setup and maintenance across Microsoft BackOffice Server and Linux; managed software installation/configuration and router troubleshooting.</p></div>
         </div>
       </div>
     </div>
@@ -587,17 +641,23 @@ html.js .reveal.visible{opacity:1;translate:0 0}
     <h2>Skills &amp; technologies</h2>
     <div class="skill-grid stagger">
       <div class="card skill-group lift reveal"><h3><span class="ico"><svg class="i"><use href="#i-cpu"/></svg></span>AI &amp; GenAI</h3><div class="tags">
-        <span class="tag">Agentic AI</span><span class="tag">RAG</span><span class="tag">LangGraph</span><span class="tag">GenAI Security</span><span class="tag">Safety Gates</span><span class="tag">Fine-tuning Data Curation</span><span class="tag">Python Automation</span></div></div>
+        <span class="tag">Agentic AI</span><span class="tag">RAG</span><span class="tag">LangGraph</span><span class="tag">GenAI Security</span><span class="tag">Safety Gates</span><span class="tag">Fine-tuning Data Curation</span><span class="tag">Python Automation</span><span class="tag">RAG Controls</span><span class="tag">API &amp; Knowledge-source Access</span><span class="tag">Threat Modelling</span><span class="tag">Security Documentation</span></div></div>
       <div class="card skill-group lift reveal"><h3><span class="ico"><svg class="i"><use href="#i-cloud"/></svg></span>Microsoft Azure</h3><div class="tags">
-        <span class="tag">Azure AD / Entra</span><span class="tag">VNets &amp; NSGs</span><span class="tag">Key Vault</span><span class="tag">Monitor</span><span class="tag">Sentinel</span><span class="tag">App Services</span><span class="tag">SQL &amp; Cosmos DB</span><span class="tag">Data Factory</span><span class="tag">Synapse</span><span class="tag">Data Lake Gen2</span><span class="tag">Recovery Services</span></div></div>
+        <span class="tag">Azure AD / Entra</span><span class="tag">VNets &amp; NSGs</span><span class="tag">Key Vault</span><span class="tag">Monitor</span><span class="tag">Sentinel</span><span class="tag">App Services</span><span class="tag">SQL &amp; Cosmos DB</span><span class="tag">Data Factory</span><span class="tag">Synapse</span><span class="tag">Data Lake Gen2</span><span class="tag">Recovery Services</span><span class="tag">Azure Migrate</span><span class="tag">Hybrid Infrastructure</span><span class="tag">VMware</span></div></div>
       <div class="card skill-group lift reveal"><h3><span class="ico"><svg class="i"><use href="#i-sliders"/></svg></span>DevOps &amp; IaC</h3><div class="tags">
-        <span class="tag">CI/CD</span><span class="tag">Terraform</span><span class="tag">ARM Templates</span><span class="tag">GitHub</span><span class="tag">Kubernetes</span><span class="tag">Container Registries</span><span class="tag">OpenStack</span></div></div>
+        <span class="tag">CI/CD</span><span class="tag">Terraform</span><span class="tag">ARM Templates</span><span class="tag">GitHub</span><span class="tag">Kubernetes</span><span class="tag">Container Registries</span><span class="tag">OpenStack</span><span class="tag">Azure DevOps</span><span class="tag">Deployment Monitoring</span></div></div>
       <div class="card skill-group lift reveal"><h3><span class="ico"><svg class="i"><use href="#i-database"/></svg></span>Storage &amp; Resilience</h3><div class="tags">
-        <span class="tag">EMC</span><span class="tag">HDS</span><span class="tag">HP</span><span class="tag">NetApp</span><span class="tag">Cisco SAN</span><span class="tag">Replication</span><span class="tag">Disaster Recovery</span><span class="tag">Backup &amp; Clustering</span><span class="tag">DC Migration</span></div></div>
+        <span class="tag">EMC</span><span class="tag">HDS</span><span class="tag">HP</span><span class="tag">NetApp</span><span class="tag">Cisco SAN</span><span class="tag">Replication</span><span class="tag">Disaster Recovery</span><span class="tag">Backup &amp; Clustering</span><span class="tag">DC Migration</span><span class="tag">IBM Storage</span><span class="tag">Brocade</span><span class="tag">SRDF</span><span class="tag">ShadowImage</span></div></div>
       <div class="card skill-group lift reveal"><h3><span class="ico"><svg class="i"><use href="#i-server"/></svg></span>Unix &amp; Linux</h3><div class="tags">
         <span class="tag">AIX</span><span class="tag">HP-UX</span><span class="tag">Red Hat Linux</span><span class="tag">Patching &amp; Hardening</span><span class="tag">Incident &amp; Change Mgmt</span><span class="tag">RCA</span></div></div>
       <div class="card skill-group lift reveal"><h3><span class="ico"><svg class="i"><use href="#i-users"/></svg></span>Leadership &amp; Governance</h3><div class="tags">
-        <span class="tag">Architecture Tracks</span><span class="tag">Stakeholder Coordination</span><span class="tag">Enterprise Standards</span><span class="tag">Regulatory Compliance</span><span class="tag">Audits</span><span class="tag">Mentoring</span></div></div>
+        <span class="tag">Architecture Tracks</span><span class="tag">Stakeholder Coordination</span><span class="tag">Enterprise Standards</span><span class="tag">Regulatory Compliance</span><span class="tag">Audits</span><span class="tag">Mentoring</span><span class="tag">Technical Training (MCT)</span><span class="tag">Technical Risk Management</span></div></div>
+      <div class="card skill-group lift reveal"><h3><span class="ico"><svg class="i"><use href="#i-usercheck"/></svg></span>Identity &amp; Access Security</h3><div class="tags">
+        <span class="tag">IAM</span><span class="tag">RBAC</span><span class="tag">Least Privilege</span><span class="tag">PAM Concepts</span><span class="tag">JIT Access</span><span class="tag">PIM</span><span class="tag">MFA</span><span class="tag">Access Reviews</span><span class="tag">Service Principals</span><span class="tag">Managed Identities</span><span class="tag">Workload Identity</span></div></div>
+      <div class="card skill-group lift reveal"><h3><span class="ico"><svg class="i"><use href="#i-key"/></svg></span>Secrets Management</h3><div class="tags">
+        <span class="tag">Azure Key Vault</span><span class="tag">Secret Storage &amp; Retrieval</span><span class="tag">Credential Lifecycle</span><span class="tag">Rotation</span><span class="tag">Key / Certificate Protection</span><span class="tag">Approvals &amp; Audit Trails</span><span class="tag">Static vs Dynamic Secrets</span></div></div>
+      <div class="card skill-group lift reveal"><h3><span class="ico"><svg class="i"><use href="#i-shield"/></svg></span>Security Operations</h3><div class="tags">
+        <span class="tag">Microsoft Sentinel</span><span class="tag">Network Security Groups</span><span class="tag">Linux/Unix Security</span><span class="tag">Patching</span><span class="tag">Hardening</span><span class="tag">Incident &amp; Change Mgmt</span><span class="tag">Root-cause Analysis</span><span class="tag">Audit Support</span><span class="tag">Disaster Recovery</span></div></div>
     </div>
   </div>
 </section>
@@ -609,19 +669,57 @@ html.js .reveal.visible{opacity:1;translate:0 0}
     <div class="cred-grid stagger">
       <div class="cred-col reveal">
         <h3><svg class="i"><use href="#i-grad"/></svg>Education</h3>
-        <div class="mini lift"><h4>MSc, Computer Science</h4><span>MDU</span></div>
-        <div class="mini lift"><h4>Advanced Diploma, IT</h4><span>IGNOU</span></div>
-        <div class="mini lift"><h4>BSc, Health Education</h4><span>Delhi University</span></div>
+        <div class="mini lift"><h4>MSc, Computer Science</h4><span>MDU — Maharshi Dayanand University</span><span class="meta">2000 – 2002</span></div>
+        <div class="mini lift"><h4>Advanced Diploma, IT</h4><span>IGNOU</span><span class="meta">2000 – 2001</span></div>
+        <div class="mini lift"><h4>BSc, Health Education</h4><span>Delhi University</span><span class="meta">1997 – 2000</span></div>
       </div>
       <div class="cred-col reveal">
         <h3><svg class="i"><use href="#i-check"/></svg>Certifications</h3>
-        <div class="mini lift"><h4>Azure AI Fundamentals</h4><span>Microsoft · AI-900</span></div>
+        <div class="mini lift"><h4>Azure AI Fundamentals</h4><span>Microsoft · AI-900</span><span class="meta">Issued Jun 2021</span></div>
+        <div class="mini lift"><h4>Cybersecurity Architect Expert</h4><span>Microsoft</span><span class="meta">Sep 2023 – Sep 2024</span></div>
+        <div class="mini lift"><h4>Microsoft Certified Trainer</h4><span>Microsoft · MCT</span><span class="meta">2020 – 2023</span></div>
       </div>
       <div class="cred-col reveal">
-        <h3><svg class="i"><use href="#i-award"/></svg>Honors &amp; Awards</h3>
-        <div class="mini lift"><h4>Star Performance Award</h4><span>AT&amp;T</span></div>
-        <div class="mini lift"><h4>Making a Difference Award</h4><span>AT&amp;T</span></div>
-        <div class="mini lift"><h4>Connection Award</h4><span>AT&amp;T</span></div>
+        <h3><svg class="i"><use href="#i-lang"/></svg>Languages</h3>
+        <div class="mini lift lang"><h4>Hindi</h4><span>Native / Bilingual</span></div>
+        <div class="mini lift lang"><h4>English</h4><span>Full Professional</span></div>
+        <div class="mini lift lang"><h4>Czech</h4><span>Elementary</span></div>
+        <div class="mini lift lang"><h4>German</h4><span>Elementary</span></div>
+      </div>
+    </div>
+
+    <div class="cred-block">
+      <h3><svg class="i"><use href="#i-check"/></svg>All certifications</h3>
+      <div class="cert-grid stagger">
+        <div class="mini lift reveal"><span class="lvl">Expert</span><h4>Cybersecurity Architect Expert</h4><span>Microsoft Certified</span><span class="meta">Sep 2023 – Sep 2024</span></div>
+        <div class="mini lift reveal"><span class="lvl">Expert</span><h4>Azure Solutions Architect Expert</h4><span>Microsoft Certified</span><span class="meta">Dec 2019 – Dec 2022</span></div>
+        <div class="mini lift reveal"><span class="lvl">Expert</span><h4>DevOps Engineer Expert</h4><span>Microsoft Certified</span><span class="meta">Aug 2020 – Aug 2022</span></div>
+        <div class="mini lift reveal"><span class="lvl">Associate</span><h4>Azure Security Engineer Associate</h4><span>Microsoft Certified</span><span class="meta">Apr 2021 – Apr 2023</span></div>
+        <div class="mini lift reveal"><span class="lvl">Associate</span><h4>Information Protection Administrator Associate</h4><span>Microsoft Certified</span><span class="meta">Sep 2021 – Sep 2022</span></div>
+        <div class="mini lift reveal"><span class="lvl">Associate</span><h4>Azure Administrator Associate</h4><span>Microsoft Certified</span><span class="meta">Aug 2020 – Aug 2022</span></div>
+        <div class="mini lift reveal"><span class="lvl">Fundamentals</span><h4>Security, Compliance &amp; Identity Fundamentals</h4><span>Microsoft Certified</span><span class="meta">Issued Sep 2021</span></div>
+        <div class="mini lift reveal"><span class="lvl">Fundamentals</span><h4>Azure AI Fundamentals</h4><span>Microsoft Certified</span><span class="meta">Issued Jun 2021</span></div>
+        <div class="mini lift reveal"><span class="lvl">Fundamentals</span><h4>Azure Data Fundamentals</h4><span>Microsoft Certified</span><span class="meta">Issued Dec 2020</span></div>
+        <div class="mini lift reveal"><span class="lvl">Fundamentals</span><h4>Azure Fundamentals</h4><span>Microsoft</span><span class="meta">Issued Aug 2019</span></div>
+        <div class="mini lift reveal"><span class="lvl">Trainer</span><h4>Microsoft Certified Trainer (MCT)</h4><span>2020–21 · 2021–22 · 2022–23</span><span class="meta">Issued Oct 2020, Oct 2021, Oct 2022</span></div>
+        <div class="mini lift reveal"><span class="lvl">Exams</span><h4>AZ-300 · AZ-301 · AZ-400</h4><span>Azure Architect Technologies &amp; Design; DevOps Solutions</span><span class="meta">Oct 2019 · Dec 2019 · Aug 2020</span></div>
+        <div class="mini lift reveal"><span class="lvl">Industry</span><h4>CCNA</h4><span>Cisco</span></div>
+        <div class="mini lift reveal"><span class="lvl">Industry</span><h4>RHCE</h4><span>Red Hat Enterprise Linux 4</span></div>
+        <div class="mini lift reveal"><span class="lvl">Industry</span><h4>MCSE 2003</h4><span>Microsoft</span></div>
+        <div class="mini lift reveal"><span class="lvl">Industry</span><h4>ITIL Certified V3</h4><span>ITIL</span></div>
+        <div class="mini lift reveal"><span class="lvl">Industry</span><h4>VMware VCP 5.0</h4><span>VMware</span></div>
+      </div>
+    </div>
+
+    <div class="cred-block">
+      <h3><svg class="i"><use href="#i-award"/></svg>Honors &amp; Awards</h3>
+      <div class="award-grid stagger">
+        <div class="mini lift reveal"><span class="lvl">AT&amp;T · Jun 2026</span><h4>Connection Award</h4><p>For contributions to SPOJIT application UX design and delivering AI-related sessions across AT&amp;T, with positive impact through collaboration and knowledge sharing.</p></div>
+        <div class="mini lift reveal"><span class="lvl">AT&amp;T · Sep 2021</span><h4>Connection Award</h4><p>For developing the Microsoft Azure training path for CELL, making it available through PLE, and leading the initial sessions.</p></div>
+        <div class="mini lift reveal"><span class="lvl">AT&amp;T · May 2021</span><h4>Connection Award</h4><p>For self-development, Azure certification and training leadership, including organisational and ERG-sponsored training sessions and seminars.</p></div>
+        <div class="mini lift reveal"><span class="lvl">AT&amp;T · May 2016</span><h4>Making a Difference Award</h4><p>For developing and delivering an integrated roadmap to optimise operational investment and efficiency, including reclaim automation.</p></div>
+        <div class="mini lift reveal"><span class="lvl">AT&amp;T · Oct 2015</span><h4>Star Performance Award</h4><p>For establishing a new Tier 2/Tier 3 storage team in Bangalore and delivering a month of technical training across Cisco, HDS, EMC and HP.</p></div>
+        <div class="mini lift reveal"><span class="lvl">AT&amp;T · Aug 2014</span><h4>Star Performance Award</h4><p>For handling a data-centre power-failure storage outage and supporting recovery until services were restored.</p></div>
       </div>
     </div>
   </div>
@@ -643,7 +741,7 @@ html.js .reveal.visible{opacity:1;translate:0 0}
 </section>
 
 <footer>
-  <div class="container"><span>© <span id="year"></span> Prateek Chauhan</span><span>Lead AI &amp; Enterprise Cloud Architect · Brno, Czechia</span></div>
+  <div class="container"><span>© <span id="year"></span> Ing. Prateek Chauhan</span><span>Lead AI &amp; Enterprise Cloud Architect · Brno, Czechia</span></div>
 </footer>
 
 <script>
@@ -684,7 +782,7 @@ const spy = new IntersectionObserver(entries => entries.forEach(e => {
 navMap.forEach((_, id) => { const s = document.getElementById(id); if (s) spy.observe(s); });
 
 // typing roles
-const roles = ['Lead AI Architect', 'Enterprise Cloud Architect', 'Agentic AI & RAG', 'Azure Security & Governance'];
+const roles = ['Lead AI Architect', 'Senior Cyber Security Engineer', 'Enterprise Cloud Architect', 'Identity & Secrets Security', 'Agentic AI & RAG', 'Azure Security & Governance'];
 const roleEl = document.getElementById('roleText');
 if (!reduce) {
   let r = 0, c = roles[0].length, del = false;
