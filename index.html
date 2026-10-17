@@ -10,6 +10,7 @@
   document.documentElement.classList.add('js');
   try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
 </script>
+<meta property="og:image" content="https://prateek-chauhan79.github.io/prateek-chauhan-portfolio/profile.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
@@ -107,8 +108,8 @@ nav.scrolled{border-bottom-color:var(--border);box-shadow:0 4px 20px rgba(0,0,0,
 .tag{padding:5px 12px;border-radius:7px;font-size:.79rem;font-weight:500;background:var(--card2);border:1px solid var(--border);color:var(--muted)}
 
 .profile{background:var(--card);border:1px solid var(--border);border-radius:22px;padding:32px;box-shadow:var(--shadow);text-align:center}
-.avatar{width:148px;height:148px;margin:0 auto 20px;border-radius:50%;padding:4px;background:var(--grad)}
-.avatar-inner{width:100%;height:100%;border-radius:50%;background:var(--card);display:flex;align-items:center;justify-content:center;font-size:3rem;font-weight:800;letter-spacing:-.02em}
+.avatar{width:168px;height:168px;margin:0 auto 20px;border-radius:50%;padding:4px;background:var(--grad)}
+.avatar-inner{width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:50% 30%;border:3px solid var(--card);background:var(--card);display:block}
 .profile h3{font-size:1.15rem}
 .profile .role{color:var(--muted);font-size:.9rem;margin-bottom:20px}
 .facts{list-style:none;text-align:left;border-top:1px solid var(--border);padding-top:18px;display:grid;gap:12px;font-size:.9rem;color:var(--muted)}
@@ -372,7 +373,7 @@ html.js .reveal.visible{opacity:1;translate:0 0}
       </div>
     </div>
     <aside class="profile hero-anim" style="--d:.3s">
-      <div class="avatar"><div class="avatar-inner grad">PC</div></div>
+      <div class="avatar"><img class="avatar-inner" src="profile.jpg" alt="Prateek Chauhan" width="148" height="148"></div>
       <h3>Ing. Prateek Chauhan</h3>
       <div class="role">Lead Architect @ AT&amp;T<br>Cloud Architect, Security, Performance Analysis<br>AI RAG, Agentic AI · GRC</div>
       <ul class="facts">
