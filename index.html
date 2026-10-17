@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prateek Chauhan | Lead AI & Enterprise Cloud Architect</title>
+<meta name="description" content="Prateek Chauhan — Lead AI Architect and Enterprise Cloud Architect with 20+ years in technology architecture, Agentic AI, RAG, Azure security and governance.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a0e1a; --bg2:#0f1424; --card:#131a2e; --card2:#18213a; --border:#232d4b;
+  --text:#e6e9f2; --muted:#9aa3bd; --accent:#38bdf8; --accent2:#a78bfa; --accent3:#34d399;
+  --grad:linear-gradient(135deg,var(--accent),var(--accent2));
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.container{max-width:1140px;margin:0 auto;padding:0 20px}
+section{padding:96px 0}
+.section-label{font-family:'JetBrains Mono',monospace;color:var(--accent);font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px}
+h2{font-size:clamp(1.8rem,3.5vw,2.5rem);font-weight:800;margin-bottom:16px;letter-spacing:-.02em}
+.lead{color:var(--muted);max-width:720px;font-size:1.05rem}
+.grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(10,14,26,.8);backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:border-color .3s}
+nav.scrolled{border-bottom-color:var(--border)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-weight:800;font-size:1.4rem}
+.logo span{color:var(--accent)}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{color:var(--muted);font-size:.92rem;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--text)}
+.menu-btn{display:none;background:none;border:0;color:var(--text);font-size:1.5rem;cursor:pointer}
+
+/* hero */
+.hero{min-height:100vh;display:flex;align-items:center;padding-top:96px;position:relative}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(600px 400px at 80% 20%,rgba(167,139,250,.15),transparent),radial-gradient(500px 400px at 10% 80%,rgba(56,189,248,.12),transparent);pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:center;position:relative}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border:1px solid var(--border);border-radius:999px;font-size:.85rem;color:var(--muted);background:var(--card)}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--accent3);box-shadow:0 0 0 0 rgba(52,211,153,.6);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(52,211,153,0)}100%{box-shadow:0 0 0 0 rgba(52,211,153,0)}}
+.hero h1{font-size:clamp(2.6rem,6vw,4.2rem);font-weight:800;letter-spacing:-.03em;line-height:1.1;margin:22px 0 14px}
+.roles{font-family:'JetBrains Mono',monospace;color:var(--accent);font-size:1.05rem;margin-bottom:20px;min-height:1.6em}
+.roles .cursor{display:inline-block;width:2px;background:var(--accent);margin-left:2px;animation:blink 1s step-end infinite}
+@keyframes blink{50%{opacity:0}}
+.hero p.lead{margin-bottom:28px}
+.btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:28px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:10px;font-weight:600;font-size:.95rem;transition:transform .2s,box-shadow .2s}
+.btn-primary{background:var(--grad);color:#0a0e1a}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(56,189,248,.3)}
+.btn-ghost{border:1px solid var(--border);background:var(--card)}
+.btn-ghost:hover{border-color:var(--accent)}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{padding:5px 12px;border-radius:999px;font-size:.8rem;background:var(--card2);border:1px solid var(--border);color:var(--muted)}
+.avatar-wrap{display:flex;justify-content:center}
+.avatar{width:min(320px,70vw);aspect-ratio:1;border-radius:50%;background:var(--grad);padding:4px;position:relative}
+.avatar-inner{width:100%;height:100%;border-radius:50%;background:var(--bg2);display:flex;align-items:center;justify-content:center;font-size:clamp(4rem,10vw,6rem);font-weight:800}
+.avatar::after{content:"";position:absolute;inset:-18px;border-radius:50%;border:1px dashed var(--border);animation:spin 40s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* stats */
+.stats{padding:0 0 40px}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.stat{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:26px;text-align:center}
+.stat .num{font-size:2.4rem;font-weight:800}
+.stat .lbl{color:var(--muted);font-size:.9rem}
+
+/* cards */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:28px;transition:transform .3s,border-color .3s}
+.card:hover{transform:translateY(-6px);border-color:var(--accent)}
+.card .icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:rgba(56,189,248,.12);font-size:1.5rem;margin-bottom:18px}
+.card h3{font-size:1.2rem;margin-bottom:10px}
+.card p{color:var(--muted);font-size:.95rem;margin-bottom:16px}
+.card ul{list-style:none;color:var(--muted);font-size:.92rem}
+.card li{padding-left:18px;position:relative;margin-bottom:6px}
+.card li::before{content:"▹";position:absolute;left:0;color:var(--accent)}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:40px;margin-top:20px}
+.about-text p{color:var(--muted);margin-bottom:16px;font-size:1.02rem}
+.focus{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:28px}
+.focus h3{margin-bottom:14px;font-size:1.1rem}
+.focus .tags{margin-top:6px}
+
+/* timeline */
+.timeline{position:relative;margin-top:48px;padding-left:32px}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--accent),var(--accent2),transparent)}
+.tl-item{position:relative;margin-bottom:28px}
+.tl-item::before{content:"";position:absolute;left:-32px;top:22px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:3px solid var(--accent)}
+.tl-item.current::before{background:var(--accent)}
+.tl-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:22px 26px}
+.tl-head{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;margin-bottom:6px}
+.tl-head h3{font-size:1.1rem}
+.tl-date{font-family:'JetBrains Mono',monospace;font-size:.82rem;color:var(--accent)}
+.tl-co{color:var(--accent2);font-weight:600;font-size:.92rem;margin-bottom:10px}
+.tl-card p{color:var(--muted);font-size:.94rem;margin-bottom:12px}
+.tl-compact{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.tl-compact .tl-card{padding:16px 20px}
+.tl-compact .tl-co{margin-bottom:0}
+
+/* skills */
+.skill-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;margin-top:40px}
+.skill-group h3{font-size:1rem;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+
+/* edu */
+.edu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
+.mini{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:22px}
+.mini h4{font-size:1rem;margin-bottom:4px}
+.mini span{color:var(--muted);font-size:.9rem}
+.mini .kind{font-family:'JetBrains Mono',monospace;font-size:.75rem;color:var(--accent);text-transform:uppercase;letter-spacing:.1em;display:block;margin-bottom:8px}
+.sub-h{margin-top:48px;font-size:1.2rem}
+
+/* contact */
+.contact{text-align:center}
+.contact .lead{margin:0 auto 32px}
+.contact-links{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+footer{border-top:1px solid var(--border);padding:28px 0;text-align:center;color:var(--muted);font-size:.88rem}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}*{animation:none!important}}
+
+/* responsive */
+@media (max-width:900px){
+  .hero-grid,.about-grid{grid-template-columns:1fr}
+  .avatar-wrap{order:-1}
+  .avatar{width:200px}
+  .cards,.edu-grid{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .tl-compact{grid-template-columns:1fr}
+  .nav-links{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;gap:0;background:var(--bg2);border-bottom:1px solid var(--border)}
+  .nav-links.open{display:flex}
+  .nav-links a{display:block;padding:14px 20px}
+  .menu-btn{display:block}
+  section{padding:72px 0}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="container nav-inner">
+    <a href="#top" class="logo">PC<span>.</span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#build">Expertise</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="container hero-grid">
+    <div>
+      <span class="badge"><span class="dot"></span>Open to AI, cloud security & architecture leadership roles</span>
+      <h1>Prateek <span class="grad">Chauhan</span></h1>
+      <div class="roles"><span id="roleText"></span><span class="cursor">&nbsp;</span></div>
+      <p class="lead">Senior enterprise, cloud and AI architect with 20+ years in technology architecture and operations — designing secure, resilient Agentic AI, RAG and Azure solutions for regulated enterprise environments.</p>
+      <div class="btns">
+        <a href="#experience" class="btn btn-primary">View Experience →</a>
+        <a href="mailto:prateekchauhan2004@gmail.com" class="btn btn-ghost">✉ Email</a>
+        <a href="https://www.linkedin.com/in/prateekchauhan" target="_blank" rel="noopener" class="btn btn-ghost">in LinkedIn</a>
+      </div>
+      <div class="tags">
+        <span class="tag">Agentic AI</span><span class="tag">RAG</span><span class="tag">GenAI Security</span>
+        <span class="tag">Microsoft Azure</span><span class="tag">Kubernetes</span><span class="tag">Terraform / IaC</span>
+        <span class="tag">DevSecOps</span><span class="tag">Disaster Recovery</span>
+      </div>
+    </div>
+    <div class="avatar-wrap"><div class="avatar"><div class="avatar-inner grad">PC</div></div></div>
+  </div>
+</header>
+
+<section class="stats">
+  <div class="container stats-grid">
+    <div class="stat reveal"><div class="num grad" data-count="20">0</div><div class="lbl">Years in Technology</div></div>
+    <div class="stat reveal"><div class="num grad" data-count="10">0</div><div class="lbl">Years Enterprise Cloud</div></div>
+    <div class="stat reveal"><div class="num grad" data-count="14">0</div><div class="lbl">Years at AT&amp;T</div></div>
+    <div class="stat reveal"><div class="num grad" data-count="3" data-plain>0</div><div class="lbl">AT&amp;T Awards</div></div>
+  </div>
+</section>
+
+<section id="build">
+  <div class="container">
+    <div class="section-label">// What I Build</div>
+    <h2>Architecture that is secure, resilient &amp; intelligent</h2>
+    <p class="lead">From storage and Unix foundations to enterprise cloud and Agentic AI — end-to-end architecture across the full technology stack.</p>
+    <div class="cards">
+      <div class="card reveal">
+        <div class="icon">🤖</div>
+        <h3>Agentic AI &amp; RAG</h3>
+        <p>AI-driven automation for complex enterprise operational processes.</p>
+        <ul>
+          <li>LangGraph-based agent engines</li>
+          <li>RAG apps with UI, APIs, safety gates &amp; knowledge sources</li>
+          <li>GenAI security architecture</li>
+          <li>Data curation for model fine-tuning</li>
+        </ul>
+      </div>
+      <div class="card reveal">
+        <div class="icon">☁️</div>
+        <h3>Azure Cloud &amp; Security</h3>
+        <p>Enterprise Azure environments built with security-by-design.</p>
+        <ul>
+          <li>Identity, networking, NSGs &amp; Key Vault</li>
+          <li>Monitor, Sentinel &amp; governance</li>
+          <li>CI/CD, Terraform, ARM &amp; GitHub</li>
+          <li>Kubernetes &amp; container registries</li>
+        </ul>
+      </div>
+      <div class="card reveal">
+        <div class="icon">🛡️</div>
+        <h3>Resilience &amp; Migration</h3>
+        <p>Keeping critical services running through change.</p>
+        <ul>
+          <li>Data-center migration</li>
+          <li>Disaster recovery &amp; replication</li>
+          <li>Backup, clustering &amp; cache-mirroring</li>
+          <li>Regulatory compliance &amp; documentation</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" style="background:var(--bg2)">
+  <div class="container">
+    <div class="section-label">// About Me</div>
+    <h2>Translating requirements into <span class="grad">supportable solutions</span></h2>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>I'm a senior enterprise, cloud and AI architect with 20+ years in technology architecture and operations, including 10+ years in enterprise cloud architecture and recent leadership in Agentic AI, RAG and AI-driven automation.</p>
+        <p>I have a strong hands-on architecture background in Microsoft Azure security controls, identity, networking, monitoring, DevOps/CI-CD, Kubernetes, Infrastructure as Code, disaster recovery and enterprise governance.</p>
+        <p>I specialise in translating architecture and operational requirements into secure, resilient and supportable solutions — and in coordinating technical teams and stakeholders to deliver them.</p>
+      </div>
+      <div class="focus reveal">
+        <h3>What motivates me</h3>
+        <div class="tags">
+          <span class="tag">Cloud Security</span><span class="tag">AI Security</span><span class="tag">Security-by-Design</span>
+          <span class="tag">Governance</span><span class="tag">Regulated Environments</span>
+        </div>
+        <h3 style="margin-top:22px">Based in</h3>
+        <p style="color:var(--muted)">📍 Brno, Czechia</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="container">
+    <div class="section-label">// Career Journey</div>
+    <h2>Experience</h2>
+    <p class="lead">Two decades progressing from systems administration to leading AI architecture at AT&amp;T.</p>
+
+    <div class="timeline">
+      <div class="tl-item current reveal"><div class="tl-card">
+        <div class="tl-head"><h3>Lead AI Architect</h3><span class="tl-date">Jan 2024 – Present</span></div>
+        <div class="tl-co">AT&amp;T</div>
+        <p>Design and deploy AI-driven automation solutions and Agentic AI architectures for complex enterprise operational processes. Contribute to GenAI Security and Agentic AI Architecture, including RAG application design with UI, APIs, safety gates, LangGraph-based agent engines and knowledge sources. Lead data curation for AI model fine-tuning and develop scalable Python automation. Designed an AI-powered solution for 5G network provisioning, improving process efficiency, delivery speed and customer service.</p>
+        <div class="tags"><span class="tag">Agentic AI</span><span class="tag">LangGraph</span><span class="tag">RAG</span><span class="tag">GenAI Security</span><span class="tag">Python</span><span class="tag">5G</span></div>
+      </div></div>
+
+      <div class="tl-item reveal"><div class="tl-card">
+        <div class="tl-head"><h3>Principal Engineer – Azure</h3><span class="tl-date">Dec 2023 – Oct 2025</span></div>
+        <div class="tl-co">AT&amp;T</div>
+        <p>Designed and implemented an Azure deployment pipeline to automate secure, reliable and scalable infrastructure and service delivery. Developed CI/CD pipelines, applied enterprise best practices and integrated monitoring for ongoing performance optimization.</p>
+        <div class="tags"><span class="tag">Azure</span><span class="tag">CI/CD</span><span class="tag">Monitoring</span><span class="tag">Automation</span></div>
+      </div></div>
+
+      <div class="tl-item reveal"><div class="tl-card">
+        <div class="tl-head"><h3>Senior Architect – Enterprise Cloud</h3><span class="tl-date">Jul 2021 – Dec 2023</span></div>
+        <div class="tl-co">AT&amp;T</div>
+        <p>Architected Azure environments covering VMs, Storage, Data Lake Gen2, Load Balancer, VNets, NSGs, Azure AD, App Services, SQL, Cosmos DB, Data Factory and Synapse. Designed DevOps capabilities including CI/CD, ARM, Key Vault, migration, Monitor, Sentinel, Recovery Services Vaults, Kubernetes, Container Registries, Terraform and GitHub. Led architecture tracks and designed data-center migration and disaster-recovery solutions with emphasis on resilience.</p>
+        <div class="tags"><span class="tag">Azure AD</span><span class="tag">Sentinel</span><span class="tag">Terraform</span><span class="tag">Kubernetes</span><span class="tag">Synapse</span><span class="tag">DR</span></div>
+      </div></div>
+
+      <div class="tl-item reveal"><div class="tl-card">
+        <div class="tl-head"><h3>Architect – Enterprise Cloud</h3><span class="tl-date">Dec 2016 – Jul 2021</span></div>
+        <div class="tl-co">AT&amp;T</div>
+        <p>Designed enterprise storage and cloud architectures and provided guidance for OpenStack and AT&amp;T cloud environments. Led project tracks and coordinated specialists from multiple disciplines. Architected migration, disaster recovery, storage replication, backup, clustering and cache-mirroring solutions.</p>
+        <div class="tags"><span class="tag">OpenStack</span><span class="tag">Storage Architecture</span><span class="tag">Replication</span><span class="tag">Clustering</span></div>
+      </div></div>
+
+      <div class="tl-item reveal"><div class="tl-card">
+        <div class="tl-head"><h3>Consultant – IT Operations / Storage Hosting Systems</h3><span class="tl-date">Jul 2012 – Dec 2016</span></div>
+        <div class="tl-co">AT&amp;T</div>
+        <p>Managed enterprise SAN environments across EMC, HDS, HP and NetApp platforms, including replication, performance analysis and capacity management. Provided end-to-end outage support, managed Cisco SAN switch installations/upgrades and mentored new team members.</p>
+        <div class="tags"><span class="tag">SAN</span><span class="tag">EMC</span><span class="tag">HDS</span><span class="tag">NetApp</span><span class="tag">Cisco MDS</span></div>
+      </div></div>
+
+      <div class="tl-item reveal"><div class="tl-card">
+        <div class="tl-head"><h3>IT Specialist L2 / Senior Unix &amp; Storage Administrator</h3><span class="tl-date">Jun 2009 – Jul 2012</span></div>
+        <div class="tl-co">IBM</div>
+        <p>Administered AIX, HP-UX and Red Hat Linux environments with security guidelines, patching, health checks, change and incident management. Managed SAN zoning and LUN operations in SLA-driven environments. Supported audits, prepared RCAs and coordinated teams and customers.</p>
+        <div class="tags"><span class="tag">AIX</span><span class="tag">HP-UX</span><span class="tag">RHEL</span><span class="tag">SAN Zoning</span><span class="tag">ITIL</span></div>
+      </div></div>
+
+      <div class="tl-item reveal">
+        <div class="tl-compact">
+          <div class="tl-card"><div class="tl-head"><h3>Unix Administrator / Technical Focal Point</h3><span class="tl-date">2007 – 2009</span></div><div class="tl-co">Natek S.R.O.</div></div>
+          <div class="tl-card"><div class="tl-head"><h3>System Administrator</h3><span class="tl-date">2006</span></div><div class="tl-co">Tribal Fusion R&amp;D Pvt. Ltd.</div></div>
+          <div class="tl-card"><div class="tl-head"><h3>Technical Territory Manager</h3><span class="tl-date">2005 – 2006</span></div><div class="tl-co">IIHT Ltd</div></div>
+          <div class="tl-card"><div class="tl-head"><h3>Unix Administrator / Server Specialist</h3><span class="tl-date">2004 – 2005</span></div><div class="tl-co">Koenig Solutions Pvt. Ltd.</div></div>
+          <div class="tl-card"><div class="tl-head"><h3>Software Consultant</h3><span class="tl-date">2000 – 2003</span></div><div class="tl-co">Electronics Corporation of India Ltd.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills" style="background:var(--bg2)">
+  <div class="container">
+    <div class="section-label">// Capabilities</div>
+    <h2>Skills &amp; Technologies</h2>
+    <div class="skill-grid">
+      <div class="card skill-group reveal"><h3>🤖 AI &amp; GenAI</h3><div class="tags">
+        <span class="tag">Agentic AI</span><span class="tag">RAG</span><span class="tag">LangGraph</span><span class="tag">GenAI Security</span><span class="tag">Safety Gates</span><span class="tag">Fine-tuning Data Curation</span><span class="tag">Python Automation</span></div></div>
+      <div class="card skill-group reveal"><h3>☁️ Microsoft Azure</h3><div class="tags">
+        <span class="tag">Azure AD / Entra</span><span class="tag">VNets &amp; NSGs</span><span class="tag">Key Vault</span><span class="tag">Monitor</span><span class="tag">Sentinel</span><span class="tag">App Services</span><span class="tag">SQL &amp; Cosmos DB</span><span class="tag">Data Factory</span><span class="tag">Synapse</span><span class="tag">Data Lake Gen2</span><span class="tag">Recovery Services</span></div></div>
+      <div class="card skill-group reveal"><h3>⚙️ DevOps &amp; IaC</h3><div class="tags">
+        <span class="tag">CI/CD</span><span class="tag">Terraform</span><span class="tag">ARM Templates</span><span class="tag">GitHub</span><span class="tag">Kubernetes</span><span class="tag">Container Registries</span><span class="tag">OpenStack</span></div></div>
+      <div class="card skill-group reveal"><h3>💾 Storage &amp; Resilience</h3><div class="tags">
+        <span class="tag">EMC</span><span class="tag">HDS</span><span class="tag">HP</span><span class="tag">NetApp</span><span class="tag">Cisco SAN</span><span class="tag">Replication</span><span class="tag">Disaster Recovery</span><span class="tag">Backup &amp; Clustering</span><span class="tag">DC Migration</span></div></div>
+      <div class="card skill-group reveal"><h3>🐧 Unix &amp; Linux</h3><div class="tags">
+        <span class="tag">AIX</span><span class="tag">HP-UX</span><span class="tag">Red Hat Linux</span><span class="tag">Patching &amp; Hardening</span><span class="tag">Incident &amp; Change Mgmt</span><span class="tag">RCA</span></div></div>
+      <div class="card skill-group reveal"><h3>🧭 Leadership &amp; Governance</h3><div class="tags">
+        <span class="tag">Architecture Tracks</span><span class="tag">Stakeholder Coordination</span><span class="tag">Enterprise Standards</span><span class="tag">Regulatory Compliance</span><span class="tag">Audits</span><span class="tag">Mentoring</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="container">
+    <div class="section-label">// Credentials</div>
+    <h2>Education, Certifications &amp; Awards</h2>
+    <div class="edu-grid">
+      <div class="mini reveal"><span class="kind">Master's</span><h4>MSc, Computer Science</h4><span>MDU</span></div>
+      <div class="mini reveal"><span class="kind">Diploma</span><h4>Advanced Diploma, IT</h4><span>IGNOU</span></div>
+      <div class="mini reveal"><span class="kind">Bachelor's</span><h4>BSc, Health Education</h4><span>Delhi University</span></div>
+    </div>
+    <h3 class="sub-h">Certifications</h3>
+    <div class="edu-grid">
+      <div class="mini reveal"><span class="kind">Microsoft</span><h4>Azure AI Fundamentals</h4><span>AI-900</span></div>
+    </div>
+    <h3 class="sub-h">Honors &amp; Awards</h3>
+    <div class="edu-grid">
+      <div class="mini reveal"><span class="kind">🏆 AT&amp;T</span><h4>Star Performance Award</h4></div>
+      <div class="mini reveal"><span class="kind">🏆 AT&amp;T</span><h4>Making a Difference Award</h4></div>
+      <div class="mini reveal"><span class="kind">🏆 AT&amp;T</span><h4>Connection Award</h4></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact" style="background:var(--bg2)">
+  <div class="container">
+    <div class="section-label">// Get In Touch</div>
+    <h2>Let's <span class="grad">connect</span></h2>
+    <p class="lead">Interested in AI architecture, cloud security or enterprise transformation? I'm always happy to talk.</p>
+    <div class="contact-links">
+      <a href="mailto:prateekchauhan2004@gmail.com" class="btn btn-primary">✉ prateekchauhan2004@gmail.com</a>
+      <a href="https://www.linkedin.com/in/prateekchauhan" target="_blank" rel="noopener" class="btn btn-ghost">in LinkedIn</a>
+      <a href="https://github.com/prateek-chauhan79" target="_blank" rel="noopener" class="btn btn-ghost">⌘ GitHub</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">© <span id="year"></span> Prateek Chauhan · Brno, Czechia</div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// nav
+const nav = document.getElementById('nav');
+addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 20));
+const links = document.getElementById('navLinks');
+document.getElementById('menuBtn').onclick = () => links.classList.toggle('open');
+links.querySelectorAll('a').forEach(a => a.onclick = () => links.classList.remove('open'));
+
+// typing roles
+const roles = ['Lead AI Architect', 'Enterprise Cloud Architect', 'Agentic AI & RAG', 'Azure Security & Governance'];
+const el = document.getElementById('roleText');
+let r = 0, c = 0, del = false;
+(function type() {
+  const word = roles[r];
+  el.textContent = word.slice(0, c);
+  if (!del && c < word.length) c++;
+  else if (del && c > 0) c--;
+  else if (!del) { del = true; return setTimeout(type, 1600); }
+  else { del = false; r = (r + 1) % roles.length; }
+  setTimeout(type, del ? 40 : 80);
+})();
+
+// reveal + counters
+const io = new IntersectionObserver(entries => entries.forEach(e => {
+  if (!e.isIntersecting) return;
+  e.target.classList.add('visible');
+  const n = e.target.querySelector('[data-count]');
+  if (n && !n.dataset.done) {
+    n.dataset.done = 1;
+    const target = +n.dataset.count, suffix = n.hasAttribute('data-plain') ? '' : '+';
+    let v = 0; const step = Math.max(1, Math.ceil(target / 30));
+    const t = setInterval(() => { v = Math.min(target, v + step); n.textContent = v + suffix; if (v >= target) clearInterval(t); }, 40);
+  }
+  io.unobserve(e.target);
+}), { threshold: 0.15 });
+document.querySelectorAll('.reveal').forEach(x => io.observe(x));
+</script>
+</body>
+</html>
