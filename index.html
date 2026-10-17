@@ -80,6 +80,38 @@ nav.scrolled{border-bottom-color:var(--border)}
 .card li{padding-left:18px;position:relative;margin-bottom:6px}
 .card li::before{content:"▹";position:absolute;left:0;color:var(--accent)}
 
+/* products */
+.platform{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:24px 28px;margin-top:36px;display:flex;gap:28px;flex-wrap:wrap;align-items:center}
+.platform h3{font-size:1.1rem;margin-bottom:4px}
+.platform p{color:var(--muted);font-size:.94rem}
+.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:.82rem;font-family:'JetBrains Mono',monospace}
+.flow span{padding:6px 12px;border-radius:8px;background:var(--card2);border:1px solid var(--border)}
+.flow i{color:var(--muted);font-style:normal}
+.product{--c:var(--accent);background:var(--card);border:1px solid var(--border);border-top:3px solid var(--c);border-radius:18px;padding:30px;transition:transform .3s,border-color .3s}
+.product:hover{transform:translateY(-6px);border-color:var(--c)}
+.product.net{--c:#34d399}.product.plan{--c:#38bdf8}.product.ops{--c:#fb923c}
+.p-head{display:flex;align-items:center;gap:14px;margin-bottom:12px;flex-wrap:wrap}
+.p-icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;background:color-mix(in srgb,var(--c) 15%,transparent)}
+.p-head h3{font-size:1.35rem}
+.p-for{color:var(--muted);font-size:.85rem}
+.status{margin-left:auto;font-size:.72rem;font-family:'JetBrains Mono',monospace;padding:4px 10px;border-radius:999px;border:1px solid var(--c);color:var(--c)}
+.product > p{color:var(--muted);margin-bottom:16px}
+.product ul{list-style:none;color:var(--muted);font-size:.93rem;margin-bottom:16px}
+.product li{padding-left:18px;position:relative;margin-bottom:6px}
+.product li::before{content:"▹";position:absolute;left:0;color:var(--c)}
+.product li b{color:var(--text);font-weight:600}
+.featured{margin-top:24px;display:grid;grid-template-columns:1.2fr 1fr;gap:28px}
+.featured .flow{margin:4px 0 20px}
+.views{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px}
+.view{background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:14px}
+.view h4{font-size:.92rem;margin-bottom:4px;color:var(--c)}
+.view p{color:var(--muted);font-size:.85rem;line-height:1.5}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:24px}
+.kpis{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}
+.kpi{font-size:.8rem;padding:5px 12px;border-radius:8px;background:color-mix(in srgb,var(--c) 12%,transparent);color:var(--c);font-weight:600}
+.note{color:var(--muted);font-size:.8rem;margin-top:-6px;margin-bottom:14px;font-style:italic}
+@media (max-width:900px){.featured,.pair,.views{grid-template-columns:1fr}.status{margin-left:0}}
+
 /* about */
 .about-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:40px;margin-top:20px}
 .about-text p{color:var(--muted);margin-bottom:16px;font-size:1.02rem}
@@ -151,6 +183,7 @@ footer{border-top:1px solid var(--border);padding:28px 0;text-align:center;color
     <ul class="nav-links" id="navLinks">
       <li><a href="#about">About</a></li>
       <li><a href="#build">Expertise</a></li>
+      <li><a href="#products">AI Products</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#education">Education</a></li>
@@ -233,7 +266,95 @@ footer{border-top:1px solid var(--border);padding:28px 0;text-align:center;color
   </div>
 </section>
 
-<section id="about" style="background:var(--bg2)">
+<section id="products" style="background:var(--bg2)">
+  <div class="container">
+    <div class="section-label">// AI Products</div>
+    <h2>Enterprise <span class="grad">AI Automation Platform</span></h2>
+    <p class="lead">A unified AI platform I designed for network engineering teams: one secure entry point, three purpose-built AI workspaces covering the full network lifecycle — <b>plan</b>, <b>configure</b>, <b>operate</b>.</p>
+
+    <div class="platform reveal">
+      <div style="flex:1;min-width:260px">
+        <h3>🧩 Platform Shell</h3>
+        <p>Product landing page, SSO login, and an Enterprise AI Hub dashboard that routes users to colour-coded workspaces with a consistent design system and toast feedback.</p>
+      </div>
+      <div class="flow"><span>Home</span><i>→</i><span>SSO Login</span><i>→</i><span>AI Hub</span><i>→</i><span>Workspace</span></div>
+    </div>
+
+    <!-- Ask Network: featured -->
+    <div class="product net featured reveal">
+      <div>
+        <div class="p-head">
+          <div class="p-icon">🌐</div>
+          <div><h3>Ask Network</h3><div class="p-for">For network &amp; security engineers</div></div>
+          <span class="status">End-to-end prototype</span>
+        </div>
+        <p>Generative AI for firewall and network configuration. Engineers describe a change in plain English, pick the target devices, and get a validated, vendor-specific configuration — with a diff, ready-to-run CLI commands, a risk explanation and a secrets-scrubbed copy.</p>
+        <div class="flow">
+          <span>Prompt</span><i>→</i><span>Vendor &amp; devices</span><i>→</i><span>Base config</span><i>→</i><span>AI generate &amp; validate</span><i>→</i><span>Review</span><i>→</i><span>Apply</span>
+        </div>
+        <ul>
+          <li><b>Multi-vendor:</b> Cisco ASA, Cisco Firepower, Check Point, FortiGate, Palo Alto, Juniper</li>
+          <li><b>Device-aware:</b> searchable multi-device selection; pulls startup, running or backup configs as the AI's base — or upload your own</li>
+          <li><b>Transparent AI pipeline:</b> staged progress — analyse prompt → apply vendor rules → generate → validate syntax</li>
+          <li><b>Human-in-the-loop:</b> Reject, Regenerate or Apply, with generation history and checksummed outputs</li>
+        </ul>
+        <div class="tags"><span class="tag">GenAI</span><span class="tag">Network Automation</span><span class="tag">Firewall Config</span><span class="tag">Security-by-Design</span><span class="tag">Figma Make</span></div>
+      </div>
+      <div>
+        <div class="views">
+          <div class="view"><h4>± Diff View</h4><p>Side-by-side current vs AI-proposed config with line numbers and red/green change highlighting.</p></div>
+          <div class="view"><h4>&gt;_ Command View</h4><p>Vendor-specific CLI commands in a terminal panel — copy or download, ready to apply.</p></div>
+          <div class="view"><h4>💬 Explanation View</h4><p>Plain-English summary of the change with impact assessment and risk level.</p></div>
+          <div class="view"><h4>🔒 Scrubbed View</h4><p>IPs and passwords masked for safe sharing in tickets and reviews.</p></div>
+        </div>
+        <ul>
+          <li><b>Compare mode:</b> full split-screen Current vs Proposed with a Scrubbed / Full toggle</li>
+          <li><b>Exports:</b> full or scrubbed config downloads</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pair">
+      <div class="product plan reveal">
+        <div class="p-head">
+          <div class="p-icon">🔀</div>
+          <div><h3>Ask Planner</h3><div class="p-for">For network planners &amp; process owners</div></div>
+          <span class="status">Concept design</span>
+        </div>
+        <p>AI-assisted process and network planning — turns documents and requirements into standards-based workflow models that planners validate before use.</p>
+        <div class="kpis"><span class="kpi">95% accuracy</span><span class="kpi">60% faster</span><span class="kpi">BPMN 2.0</span></div>
+        <div class="note">Design targets</div>
+        <ul>
+          <li>BPMN 2.0 workflow generation</li>
+          <li>Network planning automation</li>
+          <li>Document ingestion</li>
+          <li>Human-in-the-loop validation</li>
+        </ul>
+        <div class="tags"><span class="tag">BPMN</span><span class="tag">RAG</span><span class="tag">Process Automation</span></div>
+      </div>
+
+      <div class="product ops reveal">
+        <div class="p-head">
+          <div class="p-icon">📈</div>
+          <div><h3>Ask Ops</h3><div class="p-for">For network operations &amp; support teams</div></div>
+          <span class="status">Concept design</span>
+        </div>
+        <p>An AIOps copilot for operations — monitors in real time, explains root causes and drives automated remediation through runbooks.</p>
+        <div class="kpis"><span class="kpi">90% faster MTTR</span><span class="kpi">24/7 monitoring</span><span class="kpi">Auto-remediation</span></div>
+        <div class="note">Design targets</div>
+        <ul>
+          <li>Real-time monitoring</li>
+          <li>AI root-cause analysis</li>
+          <li>Automated incident remediation</li>
+          <li>Operations runbook automation</li>
+        </ul>
+        <div class="tags"><span class="tag">AIOps</span><span class="tag">Agentic AI</span><span class="tag">Runbooks</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
   <div class="container">
     <div class="section-label">// About Me</div>
     <h2>Translating requirements into <span class="grad">supportable solutions</span></h2>
