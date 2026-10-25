@@ -230,6 +230,9 @@ ul.ticks li::before{content:"";position:absolute;left:2px;top:.62em;width:7px;he
 .recog-intro{color:var(--muted);margin:-4px 0 18px;max-width:760px}
 .award-grid .mini .lvl{color:var(--gold)}
 .award-grid .mini{border-left:3px solid var(--gold)}
+.proj{margin-top:24px;align-items:flex-start}
+.proj h3{font-size:1.15rem;margin-bottom:6px}
+.proj .btn{align-self:center}
 /* ---------- identity & secrets ---------- */
 .idsec{margin-top:24px;padding:32px;--c:var(--accent2)}
 .idsec .p-head{margin-bottom:8px}
@@ -493,6 +496,17 @@ html.js .reveal.visible{opacity:1;translate:0 0}
         <div class="id-item"><h4><svg class="i"><use href="#i-bot"/></svg>AI-agent access</h4><p>Security-by-design for scoped agent permissions, API and knowledge-source access, credential protection and auditability in AI-enabled workflows.</p></div>
         <div class="id-item"><h4><svg class="i"><use href="#i-shield"/></svg>Security operations</h4><p>Linux/Unix security, patching, hardening guidelines, incident/change management, root-cause analysis, audit support and disaster recovery.</p></div>
       </div>
+    </div>
+
+    <div class="platform proj lift reveal">
+      <div class="ico"><svg class="i"><use href="#i-cloud"/></svg></div>
+      <div style="flex:1;min-width:260px">
+        <span class="status" style="margin:0 0 8px;display:inline-block;--c:var(--accent)">Featured project · AT&amp;T</span>
+        <h3>Azure Cloud Migration &amp; Landing Zone Architecture</h3>
+        <p>Designed the Azure Landing Zone for migrating AT&amp;T on-premises workloads: a hub-and-spoke network with Azure Firewall, Bastion, AKS and VM spokes, governed by Azure Policy and protected by Defender for Cloud and Sentinel. Fully provisioned with Terraform through Azure DevOps pipelines that use passwordless Workload Identity Federation, Key Vault, SonarQube and secret detection.</p>
+        <div class="tags" style="margin-top:12px"><span class="tag">Landing Zone</span><span class="tag">Hub-and-Spoke</span><span class="tag">Terraform</span><span class="tag">Azure DevOps</span><span class="tag">Workload Identity Federation</span><span class="tag">Azure Policy</span><span class="tag">Defender for Cloud</span><span class="tag">Sentinel</span></div>
+      </div>
+      <a href="https://github.com/prateek-chauhan79/azure-landing-zone-architecture" target="_blank" rel="noopener" class="btn btn-primary"><svg class="i"><use href="#i-github"/></svg>View case study</a>
     </div>
   </div>
 </section>
