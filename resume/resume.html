@@ -6,7 +6,7 @@
 <style>
 @page{size:A4;margin:11mm 13mm 10mm}
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:"Segoe UI",Calibri,Arial,sans-serif;color:#1a2433;font-size:9.05pt;line-height:1.37;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{font-family:"Segoe UI",Calibri,Arial,sans-serif;color:#1a2433;font-size:8.9pt;line-height:1.35;-webkit-print-color-adjust:exact;print-color-adjust:exact}
 a{color:inherit;text-decoration:none}
 .accent{color:#1f5fd6}
 header{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2.5px solid #1f5fd6;padding-bottom:8px;margin-bottom:10px}
@@ -25,7 +25,7 @@ p{margin-bottom:4px}
 .comp div{background:#f2f6fc;border-left:3px solid #1f5fd6;padding:5px 8px;border-radius:2px}
 .comp b{display:block;font-size:8.8pt;color:#0f1b2d;margin-bottom:1px}
 .comp span{font-size:8.3pt;color:#3c4a5e;line-height:1.38}
-.job{margin-bottom:5px;break-inside:avoid}
+.job{margin-bottom:5px}.job-head,.org{break-after:avoid}.bul li{break-inside:avoid}
 .job-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
 .job-head .role{font-weight:700;font-size:9.9pt;color:#0f1b2d}
 .job-head .date{font-size:8.5pt;color:#3c4a5e;white-space:nowrap;font-weight:600}
@@ -80,11 +80,11 @@ p{margin-bottom:4px}
 
 <h2>Core Competencies</h2>
 <div class="comp">
-  <div><b>AI Architecture &amp; Security</b><span>Agentic AI, RAG, LangGraph, GenAI security, safety gates, scoped agent permissions, threat modelling, fine-tuning data curation, Python</span></div>
+  <div><b>AI Architecture &amp; Security</b><span>Agentic AI, RAG, LangGraph, GenAI security, safety gates, scoped agent permissions, threat modelling, MLOps, fine-tuning data curation, Python</span></div>
   <div><b>Cloud Architecture (Azure)</b><span>Landing zones, hub-and-spoke, Azure Firewall, Bastion, AKS, VNets/NSGs, App Services, SQL, Cosmos DB, Synapse, hybrid, OpenStack, VMware</span></div>
   <div><b>Identity &amp; Access Security</b><span>Entra ID, passwordless Workload Identity Federation, RBAC, least privilege, PIM / JIT, MFA, access reviews, managed identities</span></div>
   <div><b>Secrets &amp; PAM</b><span>Azure Key Vault, credential lifecycle &amp; rotation, key/certificate protection, audit trails; conceptual: Delinea Secret Server, HashiCorp Vault</span></div>
-  <div><b>DevSecOps &amp; IaC</b><span>Azure DevOps, Terraform, CI/CD with SonarQube &amp; secret detection, GitHub, ARM templates, Kubernetes, Container Registry</span></div>
+  <div><b>DevSecOps &amp; IaC</b><span>Azure DevOps, Terraform, Ansible, CI/CD with SonarQube &amp; secret detection, AKS, Helm, Argo CD (GitOps), ARM</span></div>
   <div><b>Governance &amp; Operations</b><span>Azure Policy, Defender for Cloud, Microsoft Sentinel, Azure Monitor, DR &amp; replication, incident/change, RCA, audit support</span></div>
 </div>
 
@@ -98,6 +98,7 @@ p{margin-bottom:4px}
     <li>Contributed to GenAI security and Agentic AI architecture: RAG applications with UIs, APIs, safety gates, LangGraph-based agent engines and governed knowledge sources.</li>
     <li>Designed an AI-powered solution for 5G network provisioning, improving process efficiency, delivery speed and customer service.</li>
     <li>Led data curation for AI model fine-tuning and developed scalable Python automation; supported Azure deployment pipelines, CI/CD and monitoring.</li>
+    <li>Applied <b>MLOps</b> practices to AI solutions; containerised AI services on <b>AKS</b>, packaged with <b>Helm charts</b> and delivered GitOps-style with <b>Argo CD</b>.</li>
     <li>Aligned AI architecture with business, operational and technology requirements across cross-functional teams; delivered AI knowledge sessions across AT&amp;T.</li>
   </ul>
   <div class="rec"><div><span class="k">Award</span><b>Connection Award</b> · Jun 2026 — company-wide recognition for SPOJIT application UX design and AI sessions across AT&amp;T.</div></div>
@@ -109,6 +110,7 @@ p{margin-bottom:4px}
   <ul class="bul">
     <li>Designed and implemented an Azure deployment pipeline automating secure, reliable and scalable infrastructure and service delivery.</li>
     <li>Developed CI/CD pipelines, applied enterprise standards and integrated monitoring for performance optimisation and compliance-conscious delivery.</li>
+    <li>Engineered <b>Azure DevOps CI/CD</b> with <b>Terraform</b> IaC and <b>Ansible</b> configuration management; standardised AKS application delivery with Helm and Argo CD.</li>
   </ul>
 </div>
 
@@ -118,6 +120,7 @@ p{margin-bottom:4px}
   <ul class="bul">
     <li>Architected Azure environments: VMs, Storage, Data Lake Gen2, Load Balancer, VNets, NSGs, Azure AD, App Services, SQL, Cosmos DB, Data Factory and Synapse.</li>
     <li>Designed DevOps and security capabilities: CI/CD, ARM, Key Vault, Azure Monitor, Microsoft Sentinel, Azure Migrate, Recovery Services Vaults, Kubernetes, Container Registry, Terraform and GitHub.</li>
+    <li>Designed <b>Azure Landing Zones</b> with <b>hub-and-spoke</b> networking and AKS spokes, provisioned through Terraform, Ansible and Azure DevOps CI/CD pipelines.</li>
     <li>Led architecture tracks and coordinated storage, backup, cloud and infrastructure specialists; ensured documentation met enterprise and regulatory standards.</li>
     <li>Planned data-centre migrations and DR solutions; designed storage/backup architectures across EMC, HDS, HP, IBM and NetApp.</li>
   </ul>
@@ -190,8 +193,6 @@ p{margin-bottom:4px}
       <li><b>Making a Difference Award</b> <span>· 2016</span></li>
       <li><b>2 × Star Performance Award</b> <span>· 2014, 2015</span></li>
     </ul>
-    <h2>Languages</h2>
-    <p class="small">English — Full Professional · Hindi — Native · Czech — Elementary · German — Elementary</p>
   </div>
   <div>
     <h2>Education</h2>
@@ -199,6 +200,7 @@ p{margin-bottom:4px}
       <li><b>MSc, Computer Science</b> — MDU <span>· 2000–2002</span></li>
       <li><b>Advanced Diploma in IT</b> — IGNOU <span>· 2000–2001</span></li>
       <li><b>BSc, Health Education</b> — University of Delhi <span>· 1997–2000</span></li>
+      <li><b>Languages</b> — English (fluent) · Hindi (native) · Czech, German (elementary)</li>
     </ul>
   </div>
 </div>
